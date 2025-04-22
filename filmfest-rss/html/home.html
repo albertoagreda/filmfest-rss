@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Define el tipo de documento HTML y establece el idioma en español -->
+
+<head>
+  <link rel="alternate" type="application/rss+xml" title="Canal RSS de FilmFest" href="../feed.xml" />
+
+  <!-- Contiene información sobre la página web -->
+  <meta charset="UTF-8">
+
+  <!-- Especifica la codificación de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Asegura que la página sea responsive en dispositivos móviles -->
+  <meta name="description" content="Plataforma de streaming para ver películas y series online. Disfruta de contenido en HD y Ultra HD, compatible con múltiples dispositivos.">
+  
+  <!-- Proporciona una descripción para los motores de búsqueda -->
+  <title>FilmFest - Ver Películas y Series Online</title>
+  
+  <!-- Define el título de la página en la pestaña del navegador -->
+  <link rel="stylesheet" href="../css/home.css">
+  
+  <!-- Vincula el archivo CSS externo para estilos -->
+</head>
+
+<body> <!-- Contenido principal de la página -->
+
+  <!-- Header -->
+  <header class="showcase">
+
+    <!-- Sección superior de la página -->
+<nav class="header-links">
+
+      <!-- Navegación principal con enlaces -->
+      <ul>
+        <!-- Lista de enlaces del menú --> 
+        <button><li data-menuanchor="firstPage"><a href="home.html">INICIO</a></li></button>
+          <button><li data-menuanchor="secondPage"><a href="peliculas.html">PELICULAS</a></li></button>
+            <button><li data-menuanchor="thitddPage"><a href="trailer.html">TRAILER</a></li></button>
+              <button><li data-menuanchor="fourthPage"><a href="noticias.html">NOTICIAS</a></li></button>
+                <button><li data-menuanchor="fivethPage"><a href="contacto.html">CONTACTO</a></li></button>
+      </ul>
+    </nav>
+    <div class="showcase-top">
+
+      <!-- Logotipo y botón de inicio de sesión -->
+      <img src="../principal/logo-removebg-preview.png" alt="Logo de FilmFest">
+      <a href="#" class="btn btn-rounded">Iniciar sesión</a>
+    </div>
+    <div class="showcase-content">
+
+      <!-- Contenido principal del header -->
+      <h1>Disfruta del momento</h1>
+      <p>Disfruta desde cualquier lado</p>
+      <a href="peliculas.html" class="btn btn-xl">Ver contenido <i class="fas fa-chevron-right btn-icon"></i></a>
+
+      <!-- Botón para acceder al contenido -->
+    </div>
+  </header>
+
+  <!-- Tabs Section -->
+  <section class="tabs">
+
+    <!-- Sección de pestañas -->
+    <div class="container">
+
+      <!-- Contenedor principal -->
+      <div id="tab-1" class="tab-item tab-border">
+
+        <!-- Pestaña 1: Cancelación -->
+        <i class="fas fa-door-open fa-3x"></i>
+        <p class="hide-sm">Cancelación</p>
+      </div>
+      <div id="tab-2" class="tab-item">
+
+        <!-- Pestaña 2: Dispositivos -->
+        <i class="fas fa-tablet-alt fa-3x"></i>
+        <p class="hide-sm">Dispositivos</p>
+      </div>
+      <div id="tab-3" class="tab-item">
+
+        <!-- Pestaña 3: Solicita contenido -->
+        <i class="fas fa-tags fa-3x"></i>
+        <p class="hide-sm">Solicita contenido</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tab Content Section -->
+  <section class="tab-content">
+
+    <!-- Sección de contenido asociado a las pestañas -->
+    <div class="container">
+
+      <!-- Tab Content 1 -->
+      <div id="tab-1-content" class="tab-content-item show">
+        <div class="tab-1-content-inner">
+          <div>
+            <p class="text-lg">
+              Si decides que no es para ti, no hay problema. Cancela online en cualquier momento.
+            </p>
+            <a href="#" class="btn btn-lg">ES GRATIS</a>
+          </div>
+          <img src="../principal/descarga (10).jpg" alt="Cancelación sin problemas" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Tab Content 2 -->
+      <div id="tab-2-content" class="tab-content-item">
+        <div class="tab-2-content-top">
+        </div>
+        <div class="tab-2-content-bottom">
+          <div>
+
+            <!-- Dispositivo: TV -->
+            <img src="../principal/descarga.jpg" alt="Ver en tu TV" loading="lazy">
+            <p class="text-md">Ver en tu TV</p>
+            <p class="text-dark">Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray, y más.</p>
+          </div>
+          <div>
+
+            <!-- Dispositivo: Móvil -->
+            <img src="../principal/images.jpg" alt="Ver en dispositivos móviles" loading="lazy">
+            <p class="text-md">Ver instantáneamente o descargar para luego</p>
+            <p class="text-dark">Descargable en tu teléfono, PC y tablet, a donde tú vayas.</p>
+          </div>
+          <div>
+
+            <!-- Dispositivo: PC -->
+            <img src="../principal/movil.jpg" alt="Ver en FilmFest en PC" loading="lazy">
+            <p class="text-md">Usa cualquier dispositivo</p>
+            <p class="text-dark">Puedes ver online en FilmFest.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab Content 3 -->
+      <div id="tab-3-content" class="tab-content-item">
+        <div class="text-center">
+
+          <!-- Solicitud de contenido -->
+          <p class="text-lg">
+            Solicita tus películas o series favoritas y valoraremos añadirla al catálogo.
+          </p>
+          <a href="#" class="btn btn-lg">SOLICITAR</a>
+        </div>
+        <img src="../principal/2021112511502752_1.jpg">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+
+    <!-- Pie de página -->
+    <div class="footer-cols">
+
+      <!-- Columnas del footer -->
+      <ul>
+        <li><a href="#">Centro de ayuda</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Política de cookies</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Mi Cuenta</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Preguntas Frecuentes</a></li>
+      </ul>
+    </div>
+    <div class="container end-footer">
+
+      <!-- Créditos -->
+      <div class="copyright">© 2024 Página web de Alberto Agredano. Todos los derechos reservados.</div>
+    </div>
+  </footer>
+
+  <!-- Archivo JavaScript externo -->
+  <script src="../js/home.js"></script>
+
+</body>
+</html>

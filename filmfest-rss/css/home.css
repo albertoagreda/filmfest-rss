@@ -1,0 +1,388 @@
+/* Variables globales para colores */
+:root {
+    --primary-color: #5e9abd;
+    --dark-color: #51616d;
+    --light-color: #f4f4f4;
+}
+
+/* Reseteo de margenes, relleno y box-sizing */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos del cuerpo del documento */
+body {
+    font-family: "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: #010713;
+    color:#ebd290;
+}
+
+/* Estilos de lista sin estilo de tipo de lista */
+ul {
+    list-style: none;
+}
+
+/* Estilos de encabezados */
+h1, h2, h3, h4 {
+    color: #fff;
+}
+
+/* Estilos de enlaces */
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilos de párrafos */
+p {
+    margin: 0.5rem 0;
+}
+
+/* Estilos para imágenes dentro del showcase */
+img {
+    width: 100%;
+    position: center;
+    padding-top: 100px; /* Ajusta la altura que desees */
+}
+
+/* Estilos del showcase */
+.showcase {
+    width: 100%;
+    height: 93vh;
+    position: relative;
+    background: url("../principal/pngtree-old-movie-posters-on-the-wall-image_2881318.jpg") no-repeat center center/cover;
+}
+
+/* Overlay en el showcase */
+.showcase::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+/* Estilos para el top del showcase */
+.showcase-top {
+    position: relative;
+    z-index: 2;
+    height: 100px;
+
+}
+
+/* Estilos para la imagen del logo en el showcase top */
+.showcase-top img {
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 0;
+}
+
+/* Estilos para los enlaces del showcase top */
+.showcase-top a {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+/* Estilos para el contenido del showcase */
+.showcase-content {
+    position: relative;
+    z-index: 2;
+    width: 65%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+/* Estilos para encabezados dentro del showcase content */
+.showcase-content h1 {
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 1.1;
+    margin: 0 0 2rem;
+}
+
+/* Estilos para párrafos dentro del showcase content */
+.showcase-content p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+/* Estilos para las pestañas */
+.tabs {
+    background:#050d1d;
+    padding-top: 1rem;
+    border-bottom: 3px solid #3d3d3d;
+    border-right: none;
+}
+
+/* Estilos del contenedor dentro de las pestañas */
+.tabs .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Estilos para los párrafos dentro de las pestañas */
+.tabs p {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+}
+
+/* Estilos de los elementos dentro del contenedor de las pestañas */
+.tabs .container > div {
+    padding: 0.5rem 0;
+}
+
+/* Estilos de hover para los elementos dentro del contenedor de las pestañas */
+.tabs .container > div:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilo de borde para la pestaña activa */
+.tab-border {
+    border-bottom: var(--primary-color) 4px solid;
+}
+
+/* Estilos del contenido de las pestañas */
+.tab-content {
+    padding: 1rem 0;
+    background-image: url(../principal/lloyd-dirks-4SLz_RCk6kQ-unsplash.jpg); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra toda el área del fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el fondo */
+    margin: 0; /* Elimina los márgenes predeterminados del body */
+    font-family: Arial, sans-serif; /* Opcional: estilo de fuente para el contenido */
+    color: #fff;
+}
+
+/* Ocultar contenido inicial de las pestañas */
+#tab-1-content, #tab-2-content, #tab-3-content {
+    display: none;
+    opacity: 0;
+}
+
+/* Mostrar contenido activo */
+.show {
+    display: block !important;
+    opacity: 1 !important;
+    transition: all 1000 ease-in;
+}
+
+/* Estilos internos del contenido de la primera pestaña */
+#tab-1-content .tab-1-content-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estilos de la parte superior del contenido de la segunda pestaña */
+#tab-2-content .tab-2-content-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos de la parte inferior del contenido de la segunda pestaña */
+#tab-2-content .tab-2-content-bottom {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    text-align: center;
+}
+
+/* Estilos de las tablas */
+.table {
+    width: 100%;
+    margin-top: 2rem;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Estilos de los encabezados de las tablas */
+.table thead th {
+    text-transform: uppercase;
+    padding: 0.8rem;
+}
+
+/* Estilos del cuerpo de las tablas */
+.table tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+/* Estilos de las celdas del cuerpo de las tablas */
+.table tbody tr td {
+    color: #ffffff;
+    padding: 0.8rem 1.2rem;
+    text-align: center;
+}
+
+/* Estilos para la primera celda de cada fila de la tabla */
+.table tbody tr td:first-child {
+    text-align: left;
+}
+
+/* Estilos para las filas impares de la tabla */
+.table tbody tr:nth-child(odd) {
+    background: #383838;
+}
+
+/* Estilos del pie de página */
+.footer {
+    max-width: 70%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+/* Estilos del pie de página y enlaces dentro del pie de página */
+.footer,
+.footer a {
+    color: #8a8a8a;
+    font-size: 0.9rem;
+}
+
+/* Estilos de los párrafos dentro del pie de página */
+.footer p {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos de las columnas dentro del pie de página */
+.footer .footer-cols {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+/* Estilos de los elementos de las listas dentro del pie de página */
+.footer li {
+    line-height: 1.9;
+}
+
+/* Estilos del selector de idiomas dentro del pie de página */
+.footer .lang-select {
+    margin-top: 2rem;
+    color: #000000;
+    background-color: #000;
+    background-image: none;
+    border: 1px solid #333;
+    padding: 1rem 1.2rem;
+    border-radius: 5px;
+}
+
+/* Estilos generales del contenedor */
+.container {
+    max-width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+/* Estilos de textos */
+.text-xl {
+    font-size: 2rem;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.text-md {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-dark {
+    color: #000000;
+}
+
+/* Estilos de botones */
+.btn {
+    display: inline-block;
+    color: #080808;
+    background-color: #ebd290;
+    padding: 0.4rem 1.3rem;
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    transition: opacity 0.2s ease-in;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    border-radius: 50px;
+}
+ /* Estilos generales para el contenedor de los enlaces */
+ .header-links {
+    background-color: #00ffdd; /* Color de fondo */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: inset 120px 100px 250px #ffffff, inset -120px -100px 250px #fafafa;
+  }
+  
+  /* Estilos para la lista */
+  .header-links ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Estilos para cada elemento de la lista */
+  .header-links li {
+    margin: 0 15px;
+  }
+  
+  /* Estilos para los enlaces */
+  .header-links a {
+    color: rgb(61, 16, 16); /* Color del texto */
+    text-decoration: none; /* Elimina subrayado */
+    font-size: 18px; /* Tamaño de la fuente */
+    padding: 5px 10px;
+    display: inline-block;
+    transition: color 0.3s, background-color 0.3s; /* Efecto suave al pasar el ratón */
+  }
+  
+  /* Efecto al pasar el ratón sobre los enlaces */
+  .header-links a:hover {
+    background-color: #ffffff; /* Fondo al pasar el ratón */
+    color: #ffd700; /* Color de texto al pasar el ratón */
+  }
+  
+  
